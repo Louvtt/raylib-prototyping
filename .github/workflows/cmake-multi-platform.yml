@@ -64,7 +64,7 @@ jobs:
       run: cmake --build ${{ steps.strings.outputs.build-output-dir }} --config ${{ matrix.build_type }}
 
     - name: Create Artifact
-      run: >
+      run: |
         mkdir artifact
         cp ${{ steps.strings.outputs.build-output-dir }}/Release/* artifact
         cp assets artifact
