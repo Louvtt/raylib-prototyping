@@ -67,7 +67,7 @@ jobs:
       run: |
         mkdir ${{ github.workspace }}artifact
         cp ${{ steps.strings.outputs.build-output-dir }}/Release/* artifact
-        cp ${{ github.workspace }}/assets artifact
+        cp -r ${{ github.workspace }}/assets artifact
 
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4.3.3
