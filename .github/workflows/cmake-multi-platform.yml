@@ -55,7 +55,6 @@ jobs:
               apt install wayland-protocols libwayland-dev
          else
               echo "$RUNNER_OS not requiring wayland"
-              exit 1
          fi
       shell: bash
 
