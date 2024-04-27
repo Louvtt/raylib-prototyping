@@ -65,7 +65,7 @@ jobs:
 
     - name: Create Artifact
       run: |
-        mkdir ${{ github.workspace }}artifact
+        mkdir artifact
         cp ${{ steps.strings.outputs.build-output-dir }}/Release/* artifact
         cp -r ${{ github.workspace }}/assets artifact
 
